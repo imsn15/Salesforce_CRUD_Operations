@@ -6,7 +6,7 @@ http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mu
     </http:listener-config>
     <apikit:config name="salesforce-config" api="salesforce.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <salesforce:sfdc-config name="Salesforce_Config" doc:name="Salesforce Config" doc:id="bb148536-3e63-467b-884c-24b693ad15ea" >
-		<salesforce:basic-connection username="imsn@eaiesb.sandbox" password="Novv15@sn" securityToken="tDO4ilK72xzE6WfIqPpKZl5Z5" />
+		<salesforce:basic-connection username="*****" password="*****" securityToken="*********" />
 	</salesforce:sfdc-config>
 	<flow name="salesforce-main">
         <http:listener config-ref="salesforce-httpListenerConfig" path="/api/*">
