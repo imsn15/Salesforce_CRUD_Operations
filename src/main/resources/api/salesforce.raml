@@ -1,0 +1,59 @@
+#%RAML 1.0
+types:
+  AccountDataType:
+    properties:
+      Name:
+        example: Example
+        type: string
+      Phone:
+        example: Example
+        type: string
+title: Salesfroce_CRUD API
+mediaType:
+  - application/json
+version: v1
+protocols:
+  - HTTP
+/account:
+  post:
+    body:
+      type: AccountDataType
+    responses:
+      "200":
+        body:
+          type: AccountDataType
+/accounts:
+  get:
+    responses:
+      "200":
+        body:
+          type: AccountDataType[]
+/account/{id}:
+  get:
+    body: {}
+    responses:
+      "200":
+        body:
+          type: AccountDataType
+    securedBy: []
+  uriParameters:
+    id:
+      example: Example
+      type: string
+/accountt/{id}:
+  put:
+    body:
+      type: AccountDataType
+    responses:
+      "200":
+        body:
+          type: AccountDataType
+  uriParameters:
+    id:
+      example: Example
+      type: string
+/delete/{id}:
+  uriParameters:
+    id:
+      example: Example
+      type: string
